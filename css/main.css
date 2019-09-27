@@ -1,0 +1,257 @@
+  /******* Coded for Mobile First *******/
+  html {
+    background-color: #0d343f;
+    height: 100%;
+    width: 100%;
+    
+  }
+
+  body {
+    color: #fde0ce;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    padding: 1.25em;
+    font-size: 1em;
+    height: 100%;
+  }
+
+  /******* Flex Container Style *******/
+  .flex-container {
+    /*set display to flex and vertically & horizontally align by setting justify-content and align-items to center, and set flex-flow to row wrap*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+  }
+
+  header, footer {
+    /*set display to flex and vertically & horizontally align by setting justify-content and align-items to center*/
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%
+    }
+  
+  /******* Header Section *******/
+  header h1 {
+    
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #fde0ce;
+    height: auto;
+    padding: 0px 15px 0px 15px;
+    width: 100%;
+    
+  }
+
+  header span {
+    color:#df744a;
+    font-weight: bold;
+    width: inherit;
+}
+
+/******* Main Section *******/
+  main {
+    border-bottom: solid 1px #fde0ce;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%
+}
+  
+  main p {
+    height: auto;
+    padding: 0px 15px 0px 15px;
+    width: 100%;
+  }
+  
+  main span {
+    color:#df744a;
+    font-size: 1.1em;
+}
+
+/******* Div Section *******/
+.flex-items {
+  /*set display to flex and vertically & horizontally align by setting justify-content and align-items to center*/
+    color: #fde0ce;
+    line-height: 1.5em;
+    font-size: 1.6em;
+    width: 30%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  #div-1, #div-2, #div-3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: row wrap;
+    color: #fde0ce;
+    line-height: 1.5em;
+    font-size: 1em;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding: 0px 15px 30px 15px;
+    height: auto;
+    width: 100%;
+    border-bottom: solid 1px #fde0ce;
+}
+/****** Footer *******/
+  footer {
+    margin: 30px;
+    padding: 0px 15px 0px 15px;
+    display: flex;
+  }
+  
+  /******* Coded for Illuminating Social Buttons - They are not linked because this is a dummy showing design and responsive skills *******/
+
+  ul {
+    margin-top: 30px;
+    padding-left: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    top: 5%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+  }
+  
+  ul li {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin: 5%;
+    
+  }
+  
+  ul li a {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    position: relative; 
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 33px;
+    background: #fde0ce;
+    border-radius: 50%;
+    font-size: 15px;
+    color: #0d343f;
+    transition: .5s;
+  }
+  
+  ul li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #df744a;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+  }
+  
+  ul li a:hover::before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #df744a;
+  }
+  
+  ul li a:hover {
+    color: #df744a;
+    box-shadow: 0 0 5px #df744a;
+    text-shadow: 0 0 5px #df744a;
+  }
+
+  /******* Tablets and larger but small than Desktop  ********/
+  @media all and (min-width: 768px) {
+    body {
+      padding: 1em;
+    }
+
+    .flex-items {
+      flex-basis: 25%;
+    }
+   
+    #div-1, #div-2, #div-3 {
+      border-bottom: none;
+      line-height: 1.5em;
+      font-size: 1.2em;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: row nowrap;
+      }
+  
+    #div-2 {
+      border-left: 1px solid #fde0ce;
+      border-right: 1px solid #fde0ce;
+      padding: 0px 30px 0px 30px;
+      }
+  
+    #div-3 {
+      padding-left: 15px;
+      }
+    
+    footer {
+      border-top: solid 1px #fde0ce;
+      padding-top: 30px;
+      width: 100%;
+    }
+}
+/******* Small Desktop and Larger *******/
+  @media (min-width: 1200px) {
+
+    header h1 {
+      font-size: 4rem;
+    }
+
+    main p { 
+      font-size: 1.7em;
+    }
+
+    .flex-items {
+      flex-basis: 30%;
+    
+    }
+
+    #div-1, #div-2, #div-3 {
+      border-bottom: none;
+      line-height: 1.5em;
+      font-size: 1.2em;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: row nowrap;
+    }
+
+    #div-2 {
+      border-left: 1px solid #fde0ce;
+      border-right: 1px solid #fde0ce;
+      padding: 0px 30px 0px 30px;
+    }
+
+    #div-3 {
+      padding-left: 30px;
+    }
+  
+    footer {
+      border-top: solid 1px #fde0ce;
+      padding-top: 30px;
+      width: 100%;
+  }
+}
+
